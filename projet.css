@@ -743,4 +743,26 @@ ul{
   font-weight: 200px;
 
 }
-
+.up {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-size: 40px;
+  /*background-image: linear-gradient(to right top, #c8dcb8, #b6cca2, #9ab188, #90a67d,#637256);*/
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000,
+  /*0 0 10px #eef3ea, 0 0 15px #eef3ea,0 0 20px #eef3ea,0 0 25px #eef3ea*/ ;
+  transition: 0.2s;
+}
+.up:hover{
+  position: fixed;
+  transform: scale(1.2);
+  color: #fff;
+  transition: 0.2s;
+}
