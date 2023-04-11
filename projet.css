@@ -7,6 +7,8 @@
 
 body{
   background: #eef3ea;
+   /*background: rgb(162,227,228);
+  background: linear-gradient(16deg, rgba(162,227,228,1) 0%, rgba(143,215,207,1) 52%, rgba(238,243,234,1) 100%);*/
 }
 .trivez {
     width: 100%;
