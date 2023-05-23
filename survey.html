@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour VOUS</title>
+    <link rel="stylesheet" href="stylesurvey.css">
+    <link rel="icon" href="for-you.png">
+    <script src="https://kit.fontawesome.com/7140c5003e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="conteneur">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+                <form onsubmit="sendmail(); reset(); return false;">
+				    <h2>Parlons nous</h2>
+				    <input type="text" class="field" placeholder="Votre Nom & Prénom" id="name">
+				    <input type="email" class="field" placeholder="Votre Adresse mail" id="email">
+				    <input type="phone" class="field" placeholder="Votre Numéro de téléphone" id="phone">
+                
+				    <textarea class="field" id= "msg" placeholder="Exprimez-vous (vos préférences, vos idées, ce que vous préférez changer ... Bref, qui êtes vous?)" ></textarea>
+				    <button class="bouton">Envoyer</button>
+                </form>
+			</div>
+		</div>
+	</div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script lang="JavaScript">
+        function sendmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "amani.krid.8@gmail.com",
+                Password : "Amanis2020",
+                To : 'amani.krid.8@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "Nouveau Mail de TRIVEZ",
+                Body : "Nom & Prénom: " + document.getElementById("name").value 
+                + "<br> Adresse Mail: " + document.getElementById("email").value
+                + "<br> Numéro de téléphone: " + document.getElementById("phone").value 
+                + "<br> Message écrit: " + document.getElementById("msg").value 
+            }).then(
+              message => alert("Merci Pour votre temps, Vous êtes toujours la/e bienvenu(e)! ")
+            );
+
+        }
+    </script>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Plateforme</h4>
+              <ul>
+                <li><a href="projet.html">À propos de nous</a></li>
+                <li><a href="projet.html">Fonctionnalités</a></li>
+                <li><a href="projet.html">feedback</a></li>
+                <li><a href="projet.html">Contribuer</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="projet.html">Cours</a></li>
+                <li><a href="projet.html">Travaux Dirigés</a></li>
+                <li><a href="projet.html">Devoirs Surveillés</a></li>
+                <li><a href="projet.html">Examens</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Autres Services</h4>
+              <ul>
+                
+                <li><a href="pay.html">Passer en Premium</a></li>
+                <li><a href="survey.html">Pour VOUS</a></li>
+              
+              </ul>
+            </div>
+            
+            <div class="footer-col">
+              <h4>Suivez-nous</h4>
+              <div class="social-links">
+              
+                <a href="projet.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="projet.html"><i class="fa-brands fa-instagram"></i></a>
+                <a href="projet.html"><i class="fa-brands fa-linkedin-in"></i></a>
+              
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright &copy;2023 Trivez Reserved. Designed by <span> Anis_Belkacem || Amani_Krid || MohamedAziz_Khedhri </span></p>
+        </div>
+        <a class="up" href="#"><i class="fa-solid fa-angles-up fa-bounce " style="color: #317774;"></i></a>
+          
+     </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <a class="up" href="#"><i class="fa-solid fa-angles-up fa-bounce " style="color: #317774;"></i></a>    
+</body>
+</html>

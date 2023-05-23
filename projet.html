@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="projet.css" />
     <link rel="icon" href="Trivez (1).png">
     <script src="https://kit.fontawesome.com/7140c5003e.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
     
@@ -17,10 +18,10 @@
       <nav>
       <img class="image" src="Trivez (6).png">
       <ul>
-        <li><a href="#">ACCEUIL</a></li>
-        <li><a href="#">Fonctionalités</a></li>
-        <li><a href="#">À propos de nous</a></li>
-        <li><a href="#">Rejoigner nous</a></li>
+        <li><a href="#">ACCUEIL</a></li>
+        <li><a href="#fonctionnalite">Fonctionalités</a></li>
+        <li><a href="#aproposdenous">À propos de nous</a></li>
+        <li><a href="#feedback">FeedBack</a></li>
       </ul>
       </nav>
       <div class="content">
@@ -30,7 +31,7 @@
     </div>
 
     <!--------------------------------------------------fonct------------------------------------------------>
-    <div class="section1">
+    <div class="section1" id="fonctionnalite">
       <!--Categories-->
       <div class="categories">
           <div class="wrapper">
@@ -61,7 +62,7 @@
           </div>
       </div>
     </div>
-    <div class="section2">
+    <div id="aproposdenous" class="section2">
       <div class="about-section">
           <div class="inner-container">
             <h2>À PROPOS DE NOUS</h2>
@@ -80,7 +81,8 @@
           </div>
         </div>
       </div>
-    <!--------------------------------------------------rejoignez-------------------------------------------->
+    <!--------------------------------------------------rejoignez
+    
     <div class="rejoignez">
         <div class="rejoignez-nous">
             <h3 class="rejoignez-nous-title">REJOIGNEZ-NOUS</h3>
@@ -106,6 +108,47 @@
               </div>
             </form>
           </div>
+    </div>
+    -------------------------------------------->
+    <!----------------FEEDBACK----------------->
+    
+    <div class="feedbk" id="feedback">
+      <h2>FEEDBACK</h2>
+      <div class="contenir">
+        <div class="wrap">
+            <p class="textee">Comment évaluez-vous votre expérience avec Trivez?</p>
+            <div class="emoji">
+                <div >😖</div>
+                <div >😐</div>
+                <div >🙂</div>
+                <div >😀</div>
+                <div >😍</div>
+                
+            </div>
+        </div>
+        <textarea  class="textarea" cols="30" rows="3" placeholder="                                                          Votre Opinion nous intéresse ! "></textarea>
+        <a href="#" class="btn">Envoyer</a>
+      </div>
+    
+      <script lang="JavaScript">
+        const contenir = document.querySelector('.contenir');
+        const emoji= document.querySelector('.emoji');
+        const textarea =document.querySelector('.textarea');
+        const bouton =document.querySelector('.btn');
+
+        emoji.addEventListener('click',(e) =>{
+
+            if(e.target.className.includes('emoji')) return;
+
+            textarea.classList.add('textarea--active');
+            bouton.classList.add('btn--active');
+        })
+        contenir.addEventListener('mouseleave' ,() =>{
+
+            textarea.classList.remove('textarea--active');
+            bouton.classList.remove('btn--active');
+        })
+      </script>
     </div>
     <!----------------------------------map et footer-------------------------------------------------------->
     <div id="map">
@@ -162,9 +205,9 @@
         <div class="footer-col">
           <h4>Plateforme</h4>
           <ul>
-            <li><a href="#">À propos de nous</a></li>
-            <li><a href="#">Fonctionnalités</a></li>
-            <li><a href="#">Rejoignez-nous</a></li>
+            <li><a href="#aproposdenous">À propos de nous</a></li>
+            <li><a href="#fonctionnalite">Fonctionnalités</a></li>
+            <li><a href="#feedback">feedback</a></li>
             <li><a href="#">Contribuer</a></li>
           </ul>
         </div>
@@ -178,11 +221,11 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Aide</h4>
+          <h4>Autres Services</h4>
           <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="#">Poser une Question</a></li>
+            
+            <li><a href="pay.html">Passer en Premium</a></li>
+            <li><a href="survey.html">Pour VOUS</a></li>
           
           </ul>
         </div>

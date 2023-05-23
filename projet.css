@@ -461,7 +461,7 @@ hr{
 .inner-container{
   width: 40%;
   float: right;
-  background-color: rgb(152, 201, 195);
+  background-color: #98c9c3;
   padding: 60px;
   border-radius: 10px;
   justify-content: center;
@@ -736,7 +736,6 @@ ul{
   font-size: 18px;
   word-spacing: 1px;
   text-transform: capitalize;
-  color: gray;
   
 }
 
@@ -768,4 +767,122 @@ ul{
   transform: scale(1.2);
   color: #fff;
   transition: 0.2s;
+}
+
+/*feedback*/
+.feedbk{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.feedbk{
+  font-family: var(--font_logo), "Open Sans", Arial, sans-serif;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: blueviolet;*/
+}
+
+.feedbk {
+  
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  padding: 35px 0;
+
+}
+.feedbk h2{
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: 900; 
+  justify-content: center;
+  justify-items: center;
+  position: center;
+  align-items: center;
+  margin: 30px;
+  
+}
+
+.contenir{
+  width: 40rem;
+  background-color: #235956;
+  border-radius: .5rem;
+  box-shadow: 0 0 2rem #b8edea;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrap {
+  margin: 2 rem 0;
+}
+
+.textee{
+  padding: 10px;
+
+  margin-bottom: .4rem;
+  font-size: 1.3rem;
+  color: #fff;
+  text-align: center;
+  gap:0;
+}
+
+.emoji{
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.emoji > div:not(:first-child){
+  margin-left: 1rem;
+}
+
+.emoji > div{
+  cursor: pointer;
+  transition: transform .2s ease-in;
+}
+
+.emoji > div:hover{
+  transform: scale(1.4);
+}
+
+.textarea{
+  width: 100%;
+  display: block;
+  background-color:#9fcac5;
+  color: #000;
+  border: none;
+  resize: none;
+  border:none;
+  outline: none;
+  height: 0;
+  opacity: 0;
+  transition: all .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.textarea--active{
+  padding: 1rem;
+  opacity: 1;
+  height: 6rem;
+}
+
+.btn{
+  text-decoration: none;
+  color:  #fff;
+  padding: .4rem 1rem;
+  border-radius: 4px;
+  background-color: #235956;
+  position: absolute;
+  right: .5rem;
+  margin-bottom: 6px;
+  bottom: .5rem;
+  display: none;
+}
+
+.btn--active{
+  display: inline-block;
 }
