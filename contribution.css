@@ -36,7 +36,11 @@ nav ul {
   text-align: right;
 }
 nav ul li {
-  
+  /* list-style: none;
+  float: right;
+  margin: 0;
+  padding-right: 10px;
+  padding-left: 10px; */
   display: inline-block;
   list-style: none;
   margin: 10px 20px;
@@ -47,7 +51,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 11px;  
   color: #307672;
-  
+  /* font-family: "poppins"; */
   font-weight: 400;
   border: 2px solid #98d8d5;
   text-transform: uppercase;
@@ -280,230 +284,201 @@ ul{
 
 
 
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	/* font-family: 'Quicksand', sans-serif; */
-}
-
-body{
-	height: 100vh;
-	width: 100%;
-}
-
-.conteneur{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 20px 100px;
-}
-
-.conteneur:after{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background: url("./img/bg.jpg") no-repeat center;
-	background-size: cover;
-	filter: blur(50px);
-	z-index: -1;
-}
-.contact-box{
-	border-radius: 4%;
-	max-width: 850px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	background-color: #fff;
-	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
-}
-
-.left{
-	border-radius: 4%;
-	background: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/express-yourself-mark-ashkenazi.jpg") no-repeat center;
-	background-size: cover;
-	height: 100%;
-}
-
-.right{
-	padding: 25px 40px;
-}
-
-h2{
-	position: relative;
-	padding: 0 0 10px;
-	margin-bottom: 10px;
-}
-
-h2:after{
-	content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 50px;
-    border-radius: 2px;
-    background-color: #307672;
-}
-
-.field{
-	width: 100%;
-	border: 2px solid rgba(0, 0, 0, 0);
-	outline: none;
-	background-color:  rgba(210, 229, 218, 0.284);
-	padding: 0.5rem 1rem;
-	font-size: 1.1rem;
-	margin-bottom: 22px;
-	transition: .3s;
-}
-
-.field:hover{
-	background-color: rgba(0, 0, 0, 0.1);
-}
-
-textarea{
-	min-height: 150px;
-}
-
-.bouton{
-	width: 100%;
-	padding: 0.5rem 1rem;
-	background-color: #307672;
-	color: #fff;
-	font-size: 1.1rem;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	transition: .3s;
-}
-
-.bouton:hover{
-    background-color: rgb(210, 229, 218);
-    color: #000;
-}
-
-.field:focus{
-    border: 2px solid #307672;
-    background-color: #fff;
-}
-
-@media screen and (max-width: 880px){
-	.contact-box{
-		grid-template-columns: 1fr;
-	}
-	.left{
-		height: 200px;
-	}
-}
-
-
-/*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .footer-col{
+.simples {
+    height: 88vh;
     width: 100%;
-}
-}
-
-.footer-bottom{
-	background: #212225;
-	width: 100%;
-	padding: 20px 30px;
-	text-align: center;
-	align-items: center;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e4eddb;
+    /* position: relative; */
+  }
+  .simples::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #307672;
+    clip-path: polygon(86% 0, 100% 0, 100% 100%, 60% 100%);
+  }
+  .container-contribution {
+    z-index: 12;
+    max-width: 910px;
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    margin: 0 20px;
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  .container-contribution .content-contribution {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+  }
   
-.footer-bottom p{
-	font-size: 18px;
-	word-spacing: 1px;
-	text-transform: capitalize;
-	color: gray;
-	
-}
+  .content-contribution .topic {
+    font-size: 22px;
+    font-weight: 500;
+    color: #307672;
+  }
+  .content-contribution form {
+    width: 40%;
+    margin-right: 30px;
+  }
+  .content-contribution .input-box {
+    height: 50px;
+    width: 100%;
+    margin: 16px 0;
+    position: relative;
+  }
+  .content-contribution .input-box input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    padding: 0 16px;
+    background: #e4eddb;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  .content-contribution .input-box input:focus,
+  .content-contribution .input-box input:valid {
+    border-color: #307672;
+    background-color: #fff;
+  }
+  .content-contribution .input-box label {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #636c72;
+    font-size: 15px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+  .content-contribution .input-box input:focus ~ label,
+  .content-contribution .input-box input:valid ~ label {
+    top: 0;
+    left: 12px;
+    display: 14px;
+    color: #307672;
+    background: #fff;
+  }
+  .content-contribution .message-box {
+    min-height: 100px;
+    position: relative;
+  }
+  .content-contribution .message-box textarea {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    background: #e4eddb;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    outline: none;
+    padding: 5px 16px;
+    transition: all 0.3s ease;
+  }
+  .content-contribution .message-box textarea:focus {
+    border-color: #307672;
+    background-color: #fff;
+  }
+  .content-contribution .message-box label {
+    position: absolute;
+    font-size: 16px;
+    color: #636c72;
+    left: 18px;
+    top: 6px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .content-contribution .message-box textarea:focus ~ label {
+    left: 12px;
+    top: -10px;
+    color: #307672;
+    font-size: 14px;
+    background: #fff;
+  }
+  .content-contribution .input-box input[type="submit"] {
+    color: #fff;
+    background: #307672;
+    padding-left: 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
   
-.footer-bottom span{
-	text-transform: uppercase;
-	opacity: .5;
-	font-weight: 200px;
+  /* comment */
+  .drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  }
   
-} 
-.up {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  color: #fff;
-  font-size: 40px;
-  bottom: 40px;
-  right: 50px;
-  text-decoration: none;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #000;
-  transition: 0.2s;
-}
-.up:hover{
-  position: fixed;
-  transform: scale(1.2);
-  color: #fff;
-  transition: 0.2s;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .drop-container:hover {
+    background: #eee;
+    border-color: #111;
+  }
+  
+  .drop-container:hover .drop-title {
+    color: #222;
+  }
+  
+  .drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  input[type="file"] {
+    width: 350px;
+    max-width: 100%;
+    color: #444;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #555;
+  }
+  
+  input[type="file"]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #307672;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  input[type="file"]::file-selector-button:hover {
+    background: #078680;
+  }
+  .content-contribution .input-box input[type="submit"]:hover {
+    background-color: #078680;
+  }
 
 
 .up {
@@ -522,11 +497,10 @@ textarea{
     box-shadow: 0 0 5px #000,
     /*0 0 10px #eef3ea, 0 0 15px #eef3ea,0 0 20px #eef3ea,0 0 25px #eef3ea*/ ;
     transition: 0.2s;
-  }
-  .up:hover{
+}
+.up:hover{
     position: fixed;
     transform: scale(1.2);
     color: #fff;
     transition: 0.2s;
-  }
-  
+}
